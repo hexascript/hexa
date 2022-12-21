@@ -1,0 +1,30 @@
+{
+  "name": "mellowjs",
+  "version": "1.0.0",
+  "description": "Mellow.js is a framework for building mobile application and web application.",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mellow-js/mellow.js.git"
+  },
+  "keywords": [
+    "Framework"
+  ],
+  "author": "Mellow-js",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mellow-js/mellow.js/issues"
+  },
+  "bin": {
+    "mellow": "./bin/index.js"
+  },
+  "homepage": "https://github.com/Mellow-js/mellow.js#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.18.2",
+    "yargs": "^17.1.1-candidate.0"
+  }
+}
