@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 
 const yargs = require('yargs/yargs')
-const {
-  hideBin
-} = require('yargs/helpers')
+const { hideBin } = require('yargs/helpers')
 const argv = yargs(hideBin(process.argv)).argv
 const fs = require("fs");
 const paths = require('path');
-
 const path = argv.create;
+
 exports.main = function() {
   fs.access(path, (error) => {
     if (error) {
