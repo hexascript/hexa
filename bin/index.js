@@ -5,6 +5,7 @@ const { hideBin} = require('yargs/helpers')
 const argv = yargs(hideBin(process.argv)).argv
 const server = require("./server.js")
 const create = require("./create.js")
+const packages = require("./packages.js")
 const ascii = require("./ascii.js")
 
 if (argv.server != null) {
@@ -15,4 +16,9 @@ if (argv.server != null) {
 if (argv.create != null) {
   ascii.main();
   create.main();
+}
+
+if (argv.install != null) {
+  ascii.main();
+  packages.main();
 }
