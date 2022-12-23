@@ -9,7 +9,7 @@
     ])"></AppBar>
   <content>
     <content class="p-5">
-      <h3 return="helloworld"></h3>
+      <h1 return="helloworld"></h1>
     </content>
   </content>
 </View>
