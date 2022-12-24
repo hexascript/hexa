@@ -18,8 +18,10 @@ exports.main = function() {
     css: 'text/css',
   }
   const server = http.createServer(function(request, response) {
+    if(request.url == "/") {
+      request.url = "index.html"
+    }
     console.log(request.method + ' ' + request.url)
-
     const filepath = path.join(publicFolder, request.url)
     fs.readFile(filepath, function(err, data) {
       if (err) {
