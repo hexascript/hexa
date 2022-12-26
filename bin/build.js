@@ -38,6 +38,16 @@ exports.main = function() {
                     fs.writeFile(process.cwd() + "\\android\\app\\src\\main\\AndroidManifest.xml", data, (err) => {
                       if (err) console.log(err);
                       console.log("[+] Application ID: " + settings.applicationId);
+                      var path_setting = settings.applicationId.replaceAll(".", "\\");
+                      fs.mkdirSync(process.cwd() + "\\android\\app\\src\\main\\java\\" + path_setting, { recursive: true });
+                      fs.readFile(project_dir + "\\java\\MainActivity.java", function(err, buf) {
+                        var data = buf.toString();
+                        data = data.replace('{{APP_ID}}', settings.applicationId);
+                        fs.writeFile(process.cwd() + "\\android\\app\\src\\main\\java\\" + path_setting + "\\MainActivity.java", data, (err) => {
+                          if (err) console.log(err);
+                          console.log("[+] Create MainActivity.java to your project.");
+                        });
+                      });
                     });
                   });
                 });
