@@ -19,11 +19,13 @@ exports.main = function() {
         if (error) {
           console.log(error);
         } else {
-            fs.writeFile(argv.create + "\\android.config", "{}", (err) => {
+            fs.writeFile(argv.create + "\\android.json", `{
+              "applicationId": "com.example.app"
+}`, (err) => {
               if (err) console.log(err);
               console.log("[+] Created Android Settings File.");
             });
-            fs.writeFile(argv.create + "\\windows.config", "{}", (err) => {
+            fs.writeFile(argv.create + "\\windows.json", "{}", (err) => {
               if (err) console.log(err);
               console.log("[+] Created Windows Settings File.");
             });
