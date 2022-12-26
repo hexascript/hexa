@@ -1,7 +1,7 @@
 {
   "name": "mellowjs",
   "version": "1.0.0",
-  "description": "Mellow.js is a framework for building mobile application and web application.",
+  "description": "Mellow.js is a cross-platform framework for creating mobile, desktop, and web apps with Javascript, HTML and CSS with single shared codebase.",
   "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
