@@ -13,15 +13,15 @@ ncp.limit = 16;
 
 exports.main = function() {
   var project_dir = paths.join(paths.dirname(fs.realpathSync(__filename)), '../');
-  fs.mkdir(process.cwd() + '\\' + argv.create, (error) => {
+  fs.mkdir(process.cwd() + '/' + argv.create, (error) => {
     if (error) {
       console.log(error);
     } else {
-      fs.mkdir(process.cwd() + '\\' + argv.create + '\\src', (error) => {
+      fs.mkdir(process.cwd() + '/' + argv.create + '/src', (error) => {
         if (error) {
           console.log(error);
         } else {
-          fs.writeFile(argv.create + "\\android.json", `{
+          fs.writeFile(argv.create + "/android.json", `{
               "applicationId": "com.example.app",
               "appName": "Example Project",
 			  "versionCode": "1.0",
@@ -32,11 +32,11 @@ exports.main = function() {
             if (err) console.log(err);
             console.log("[+] Created Android Settings File.");
           });
-          fs.writeFile(argv.create + "\\windows.json", "{}", (err) => {
+          fs.writeFile(argv.create + "/windows.json", "{}", (err) => {
             if (err) console.log(err);
             console.log("[+] Created Windows Settings File.");
           });
-          ncp(project_dir + '\\src', argv.create + '\\src',
+          ncp(project_dir + '/src', argv.create + '/src',
             function(err) {
               if (err) {
                 return console.error(err);
