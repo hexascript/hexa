@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-const http = require('http')
-const fs = require('fs')
-const path = require('path')
+import http from "http"
+import fs from "fs"
+import path from "path"
 
 exports.main = function() {
 	process.on('uncaughtException', err => console.error('uncaughtException', err))
 	process.on('unhandledRejection', err => console.error('unhandledRejection', err))
 
-	const publicFolder = process.cwd() + '\\src\\';
-	const port = "1337";
+	const publicFolder = process.cwd() + '\\src\\'
+	const port = "1337"
 
 	const mediaTypes = {
 		jpg: 'image/jpeg',

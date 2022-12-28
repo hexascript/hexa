@@ -4,7 +4,9 @@
   "description": "Mellow.js is a cross-platform framework for creating mobile, desktop, and web apps with Javascript, HTML and CSS with single shared codebase.",
   "main": "bin/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel scripts/** -d bin",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -27,5 +29,10 @@
     "figlet": "^1.5.2",
     "ncp": "^2.0.0",
     "yargs": "^17.1.1-candidate.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
   }
 }
