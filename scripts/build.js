@@ -54,15 +54,14 @@ exports.main = function() {
                           console.log("[+] Create MainActivity.java to your project.")
                         })
                       })
-                      fs.readFile(project_dir + "/java/strings.xml", function(err, buf) {
-                        var data = buf.toString()
-                        data = data.replace('{{APP_NAME}}', settings.appName)
+                        var data = `<resources>
+                        <string name="app_name">${settings.appName}</string>
+                    </resources>`
                         fs.writeFile(process.cwd() + "/android/app/src/main/res/values/strings.xml", data, (err) => {
                           if (err) console.log(err)
                           console.log("[+] App Name: " + settings.appName)
-                          console.log("[+] Application ID: " + settings.applicationId)
+                          console.log("[+] App ID: " + settings.applicationId)
                         })
-                      })
                     })
                   })
                 })
