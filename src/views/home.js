@@ -2,7 +2,6 @@ import { render } from '../mellow/core.js'
 import { AppBar } from '../mellow/ui.js'
 
 export function Home() {
-
   const Header =
   AppBar({
     text: 'Example Project',
@@ -20,5 +19,4 @@ export function Home() {
     </View>`
   
   render("root", Html)
-  
 }
