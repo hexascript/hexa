@@ -1,11 +1,8 @@
-route('/', 'home.mellow');
+import { route, ready } from './mellow/core.js'
+import { Home } from './views/home.js'
 
-const Mellow = function() {
-    var app = new App();
-    app.setTitle('Example Project');
-    return {
-        helloworld: 'Hello World'
-    };
-};
+const Mellow = function() {
+  route('/', Home())
+}
 
-ready(Mellow);
+ready(Mellow)
