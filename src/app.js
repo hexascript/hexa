@@ -1,8 +1,8 @@
-import { route, ready } from './mellow/core.js'
-import { Home } from './views/home.js'
+import Mellow from './mellow/core.js'
+import Home from './views/home.js'
 
-const Mellow = function() {
-  route('/', Home())
+const Main = function() {
+  Mellow.route('/', Home)
 }
 
-ready(Mellow)
+Mellow.ready(Main)ellow)
