@@ -48,7 +48,7 @@ exports.main = function() {
                       shell.exit(1);
                     }else{
                       shell.exec("npm install")
-                      shell.exec("electron-packager . app --platform win32 --arch x64 --out '../dist/windows/'")
+                      shell.exec("electron-packager . app --platform win32 --arch x64 --overwrite --out '../dist/windows/'")
                     }
                   })
                 })
