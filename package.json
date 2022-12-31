@@ -1,11 +1,11 @@
 {
   "name": "mellowjs",
   "version": "1.0.0",
-  "description": "Mellow.js is a cross-platform framework for creating mobile, desktop, and web apps with Javascript, HTML and CSS with single shared codebase.",
+  "description": "Mellow.js is a cross-platform framework for creating mobile, desktop, and progressive web apps with ES6+ JavaScript with single shared codebase.",
   "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel scripts/** -d bin",
+    "build": "babel scripts/** -d bin && chmod +x bin/index.js",
     "prepare": "npm run build"
   },
   "repository": {
