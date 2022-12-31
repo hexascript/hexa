@@ -46,11 +46,4 @@ exports.main = function() {
         })
     }
   })
-  const ShellScript = exec('sh windows/build');
-  ShellScript.stdout.on('data', (data) => {
-    console.log(data)
-  })
-  ShellScript.stderr.on('data', (data) => {
-    console.error(data)
-  })
 }
