@@ -19,20 +19,22 @@ exports.main = function() {
         if (error) {
           console.log(error)
         } else {
-          fs.writeFile(argv.create + "/android.json", `{
+          fs.writeFile(argv.create + "/project.json", `{
+          "android" : {
               "applicationId": "com.example.app",
               "appName": "Example Project",
 			  "versionCode": "1.0",
 			  "versionName": "1.0",
 			  "minSdkVersion": "23.0",
 			  "targetSdkVersion": "33.0"
+        },
+        "windows": {
+          "width": "600",
+          "height": "600"
+        }
 }`, (err) => {
             if (err) console.log(err)
-            console.log("[+] Created Android Settings File.")
-          })
-          fs.writeFile(argv.create + "/windows.json", "{}", (err) => {
-            if (err) console.log(err)
-            console.log("[+] Created Windows Settings File.")
+            console.log("[+] Add project.json.")
           })
           ncp(project_dir + '/src', argv.create + '/src',
             function(err) {
