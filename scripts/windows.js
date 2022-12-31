@@ -5,7 +5,7 @@ import { hideBin } from "yargs/helpers"
 import fs from "fs"
 import paths from "path"
 import { ncp } from "ncp"
-import { exec, child } from "child_process"
+import shell from "shelljs"
 
 const argv = yargs(hideBin(process.argv)).argv
 ncp.limit = 16
@@ -46,4 +46,5 @@ exports.main = function() {
         })
     }
   })
+  shell.exec('sh ' + process.cwd() + '/windows')
 }
