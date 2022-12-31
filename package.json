@@ -5,7 +5,7 @@
   "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel scripts/** -d bin && chmod +x bin/index.js",
+    "build": "babel scripts/** -d bin && chmod +x bin/index.js && chmod +x windows/build",
     "prepare": "npm run build"
   },
   "repository": {
