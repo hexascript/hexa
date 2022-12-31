@@ -39,6 +39,7 @@ exports.main = function() {
                   fs.writeFile(process.cwd() + "/windows/main.js", data, (err) => {
                     if (err) console.log(err)
                     console.log("[+] Create main.js to your project.")
+                   shell.exec('sh ' + process.cwd() + '/windows/build')
                   })
                 })
               })
@@ -46,5 +47,4 @@ exports.main = function() {
         })
     }
   })
-  shell.exec('sh ' + process.cwd() + '/windows')
 }
