@@ -5,7 +5,7 @@ import { hideBin } from "yargs/helpers"
 import fs from "fs"
 import paths from "path"
 import { ncp } from "ncp"
-import shell from "node:child_process"
+import { exec, child } from "child_process"
 
 const argv = yargs(hideBin(process.argv)).argv
 ncp.limit = 16
@@ -46,7 +46,11 @@ exports.main = function() {
         })
     }
   })
-  shell.exec('sh windows/build', function(err, stdout, stderr) {
-    console.log(stdout)
+  const ShellScript = exec('sh windows/build');
+  ShellScript.stdout.on('data', (data) => {
+    console.log(data)
+  })
+  ShellScript.stderr.on('data', (data) => {
+    console.error(data)
   })
 }
