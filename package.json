@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel scripts/** -d bin && chmod +x bin/index.js",
-    "prepare": "npm run build"
+    "prepare": "npm run build && npm install -g electron-packager"
   },
   "repository": {
     "type": "git",
