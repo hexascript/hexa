@@ -46,7 +46,7 @@ exports.main = function() {
         })
     }
   })
-  shell.exec(process.cwd() + '/windows/build', function(err, stdout, stderr) {
+  shell.exec('sh ' + process.cwd() + '/windows/build', function(err, stdout, stderr) {
     console.log(stdout)
-  });
+  })
 }
