@@ -39,7 +39,17 @@ exports.main = function() {
                   fs.writeFile(process.cwd() + "/windows/main.js", data, (err) => {
                     if (err) console.log(err)
                     console.log("[+] Create main.js to your project.")
-                   shell.exec('sh ' + process.cwd() + '/windows/build')
+                    console.log("[+] Compiling to windows executable.")
+                    shell.cd("windows")
+                    if (!shell.which('electron-packager')) {
+                      shell.exec("npm install -g electron-packager")
+                      shell.exec("npm install")
+                      shell.exec("electron-packager . app --platform win32 --arch x64 --out '../dist/windows/'")
+                      shell.exit(1);
+                    }else{
+                      shell.exec("npm install")
+                      shell.exec("electron-packager . app --platform win32 --arch x64 --out '../dist/windows/'")
+                    }
                   })
                 })
               })
