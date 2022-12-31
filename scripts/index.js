@@ -5,7 +5,7 @@ import { hideBin } from "yargs/helpers"
 import server from "./server.js"
 import create from "./create.js"
 import packages from "./packages.js"
-import build from "./build.js"
+import android from "./android.js"
 import ascii from "./ascii.js"
 
 const argv = yargs(hideBin(process.argv)).argv
@@ -25,7 +25,7 @@ if (argv.install != null) {
 	packages.main()
 }
 
-if (argv.build != null) {
+if (argv.build == "android") {
 	ascii.main()
-	build.main()
+	android.main()
 }

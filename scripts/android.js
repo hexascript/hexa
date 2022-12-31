@@ -11,7 +11,6 @@ ncp.limit = 16
 
 exports.main = function() {
   var project_dir = paths.join(paths.dirname(fs.realpathSync(__filename)), '../')
-  if (argv.build == "android") {
     fs.rmSync(process.cwd() + '/android', { recursive: true, force: true })
     fs.mkdir(process.cwd() + '/android', (error) => {
       if (error) {
@@ -60,7 +59,7 @@ exports.main = function() {
                         fs.writeFile(process.cwd() + "/android/app/src/main/res/values/strings.xml", data, (err) => {
                           if (err) console.log(err)
                           console.log("[+] App Name: " + settings.android.appName)
-                          console.log("[+] App ID: " + settings.android.applicationId)
+                          console.log("[+] App ID: " + settings.applicationId)
                         })
                     })
                   })
@@ -69,5 +68,4 @@ exports.main = function() {
           })
       }
     })
-  }
 }
