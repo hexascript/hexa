@@ -19,12 +19,21 @@
 * Routing
 * Views
 * Fast & Reliable
+* Libraries
 
 ## Installation
 ```bash
 $ git clone https://github.com/mellow-js/mellow.js
 $ cd mellow.js
+$ npm install
 $ npm install -g .
+```
+
+## Create App ##
+```bash
+$ mellow --create helloworld
+$ cd helloworld
+$ mellow --server
 ```
 
 ## Examples ##
