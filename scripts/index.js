@@ -6,6 +6,7 @@ import server from "./server.js"
 import create from "./create.js"
 import packages from "./packages.js"
 import android from "./android.js"
+import windows from "./windows.js"
 import ascii from "./ascii.js"
 
 const argv = yargs(hideBin(process.argv)).argv
@@ -28,4 +29,9 @@ if (argv.install != null) {
 if (argv.build == "android") {
 	ascii.main()
 	android.main()
+}
+
+if (argv.build == "windows") {
+  ascii.main()
+  windows.main()
 }
