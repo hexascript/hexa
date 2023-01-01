@@ -1,4 +1,4 @@
-const MellowStorage = {
+const HexaStorage = {
       add(key, value) {
         localStorage.setItem(`storage_${key}`, value)
       },
@@ -12,4 +12,4 @@ const MellowStorage = {
       }
 }
 
-export default MellowStorage
+export default HexaStorage

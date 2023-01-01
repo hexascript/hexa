@@ -1,4 +1,4 @@
-const MellowDOM = {
+const HexaDOM = {
 
     element(id) {
       if (id.charAt(0) == '#') {
@@ -31,4 +31,4 @@ const MellowDOM = {
     
 }
 
-export default MellowDOM
+export default HexaDOM

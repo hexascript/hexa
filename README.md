@@ -1,10 +1,10 @@
-# Mellow.js
+# Hexa
 
 <p><img src="https://img.shields.io/badge/node-v10.15.3-green"> <img src="https://img.shields.io/badge/lang-javascript-yellow"> <img src="https://img.shields.io/badge/license-MIT-success"></p>
 
-[Mellow.js](https://github.com/mellow-js/mellow.js) is a cross-platform framework for creating mobile, desktop, and progressive web app with ES6+ JavaScript. You can develop apps that can run on Android, iOS, Linux, macOS, Windows and Web from a single shared codebase.
+[Hexa](https://github.com/hexascript/hexa) is a cross-platform framework for creating mobile, desktop, and progressive web app with ES6+ JavaScript. You can develop apps that can run on Android, iOS, Linux, macOS, Windows and Web from a single shared codebase.
 
-[Mellow.js](https://github.com/mellow-js/mellow.js) is under development and still update.
+[Hexa](https://github.com/hexascript/hexa) is under development and still update.
 
 ## Getting Started ##
 
@@ -23,38 +23,38 @@
 
 ## Installation
 ```bash
-$ git clone https://github.com/mellow-js/mellow.js
-$ cd mellow.js
+$ git clone https://github.com/hexascript/hexa
+$ cd hexa
 $ npm install
 $ npm install -g .
 ```
 
 ## Create App ##
 ```bash
-$ mellow --create helloworld
+$ hexa --create helloworld
 $ cd helloworld
-$ mellow --server
+$ hexa --server
 ```
 
 ## Examples ##
 
 ### app.js ###
 ```js
-import Mellow from './mellow/core.js'
+import App from './hexa/core.js'
 import Home from './views/home.js'
 
 const Main = function() {
-    Mellow.route('/', Home)
+    App.route('/', Home)
 }
 
-Mellow.ready(Main)
+App.ready(Main)
 
 ```
 
 ### views/home.js ###
 ```js
-import DOM from '../mellow/dom.js'
-import { AppBar } from '../mellow/ui.js'
+import DOM from '../hexa/dom.js'
+import { AppBar } from '../hexa/ui.js'
 
 export default function() {
   const Header =

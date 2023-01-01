@@ -1,5 +1,5 @@
-import DOM from '../mellow/dom.js'
-import { AppBar } from '../mellow/ui.js'
+import DOM from '../hexa/dom.js'
+import { AppBar } from '../hexa/ui.js'
 
 export default function() {
   const Header =

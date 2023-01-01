@@ -1,4 +1,4 @@
-const MellowCore = {
+const HexaCore = {
    
    ready(func) {
        window.addEventListener('hashchange', func)
@@ -21,4 +21,4 @@ const MellowCore = {
   
 }
 
-export default MellowCore
+export default HexaCore

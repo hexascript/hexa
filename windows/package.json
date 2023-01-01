@@ -4,7 +4,7 @@
     "start": "electron ."
   },
   "build": {
-    "appId": "com.mellowjs.app",
+    "appId": "com.hexascript.app",
     "compression": "maximum"
   },
   "devDependencies": {

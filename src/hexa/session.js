@@ -1,4 +1,4 @@
-const MellowSession = {
+const HexaSession = {
       add(key, value) {
         localStorage.setItem(`session_${key}`, value)
       },
@@ -12,4 +12,4 @@ const MellowSession = {
       }
 }
 
-export default MellowSession
+export default HexaSession

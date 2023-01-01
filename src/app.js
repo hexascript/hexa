@@ -1,7 +1,7 @@
-import Mellow from './mellow/core.js'
+import App from './hexa/core.js'
 import Home from './views/home.js'
 
 const Main = function() {
-    Mellow.route('/', Home)
+    App.route('/', Home)
 }
-Mellow.ready(Main)
+App.ready(Main)
