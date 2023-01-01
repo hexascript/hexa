@@ -1,4 +1,4 @@
-import Mellow from '../mellow/core.js'
+import DOM from '../mellow/dom.js'
 import { AppBar } from '../mellow/ui.js'
 
 export default function() {
@@ -14,9 +14,9 @@ export default function() {
     <View>
        ${Header}
        <div class="p-5">
-          <h1>Hello World</h1>
+          <h1 id="hello">Hello World</h1>
        </div>
     </View>`
   
-  Mellow.render("#root", Html)
+  DOM.render("#root", Html)
 }
