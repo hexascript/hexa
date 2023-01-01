@@ -71,9 +71,9 @@ export default function() {
   const Html = `
     <View>
        ${Header}
-       <div class="p-5">
+       <Content>
           <h1>Hello World</h1>
-       </div>
+       </Content>
     </View>`
   
   DOM.render("#root", Html)
