@@ -23,6 +23,26 @@ export function TextBox(data) {
   }else{
        var readonly = ""
   }
-  return `<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">${data.labelText}</label>
-        <input type="${data.type}" id="${data.id}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="${data.placeHolder}" ${data.readonly}>`
+  if(data.labelText == null) {
+    var labelText = ""
+  }else{
+    var labelText = `<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">${data.labelText}</label>`
+  }
+  if(data.backgroundColor == null) {
+    var backgroundColor = "gray-50"
+  }else{
+    var backgroundColor = data.backgroundColor
+  }
+  if(data.textColor == null) {
+    var textColor = "gray-900"
+  } else {
+    var textColor = data.textColor
+  }
+  if (data.borderColor == null) {
+    var borderColor = "gray-300"
+  } else {
+    var borderColor = data.borderColor
+  }
+  return `${labelText}
+        <input type="${data.type}" id="${data.id}" class="bg-${backgroundColor} border border-${borderColor} text-${textColor} text-sm rounded-lg block w-full p-2.5" placeholder="${data.placeHolder}" ${data.readonly}>`
 }
