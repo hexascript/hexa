@@ -25,8 +25,7 @@
 ```bash
 $ git clone https://github.com/hexascript/hexa
 $ cd hexa
-$ npm install
-$ npm install -g .
+$ npm run build
 ```
 
 ## Create New Project ##
