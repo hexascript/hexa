@@ -69,7 +69,7 @@ export default function() {
     <View>
        ${Header}
        <div class="p-5">
-          <h1 id="hello">Hello World</h1>
+          <h1>Hello World</h1>
        </div>
     </View>`
   
