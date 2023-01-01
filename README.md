@@ -34,6 +34,11 @@ $ cd helloworld
 $ hexa --server
 ```
 
+## Build & Compile
+```bash
+$ hexa --build [android|windows|web]
+```
+
 ## Examples ##
 
 ### app.js ###
@@ -52,7 +57,7 @@ App.ready(Main)
 ### views/home.js ###
 ```js
 import DOM from '../hexa/dom.js'
-import { AppBar } from '../hexa/ui.js'
+import {AppBar} from '../hexa/ui.js'
 
 export default function() {
   const Header =
