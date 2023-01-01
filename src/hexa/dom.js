@@ -23,9 +23,9 @@ const HexaDOM = {
       }else if(id.charAt(0) == '.') {
         var template = document.getElementsByClassName(id.replace('.', ""))
       }
-      const view = '<div class="mx-auto"><div class="h-full bg-gray-50">'
-      const result = data.replace('<View>', view)
-        .replace('</View>', '</div></div>')
+      const result = data.replace(/<view>(.*?)<\/view>/gis, '<div class="mx-auto"><div class="h-full bg-gray-50">$1</div></div>')
+        .replace(/<content>(.*?)<\/content>/gis, '<div class="p-6">$1</div>')
+        
       template.innerHTML = result
     }
     
