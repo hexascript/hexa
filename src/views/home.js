@@ -1,12 +1,10 @@
 import DOM from '../hexa/dom.js'
-import { AppBar } from '../hexa/ui.js'
+import {AppBar} from '../hexa/ui.js'
 
 export default function() {
   const Header =
   AppBar({
     text: 'Example Project',
-    backgroundColor: 'slate-50',
-    textColor: 'slate-800',
     backButton: 'false'
   })
 

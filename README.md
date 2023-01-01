@@ -27,7 +27,7 @@ $ npm install
 $ npm install -g .
 ```
 
-## Create App ##
+## Create New Project ##
 ```bash
 $ hexa --create helloworld
 $ cd helloworld
@@ -58,8 +58,6 @@ export default function() {
   const Header =
   AppBar({
     text: 'Example Project',
-    backgroundColor: 'slate-50',
-    textColor: 'slate-800',
     backButton: 'false'
   })
 
