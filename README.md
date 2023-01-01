@@ -1,6 +1,9 @@
 <img src="https://i.ibb.co/LSQwZW3/IMG-20230101-181058.jpg">
 
-<p><img src="https://img.shields.io/badge/node-v10.15.3-green"> <img src="https://img.shields.io/badge/lang-javascript-yellow"> <img src="https://img.shields.io/badge/license-MIT-success"></p>
+<p><img src="https://img.shields.io/badge/node-v10.15.3-green"> <img src="https://img.shields.io/badge/lang-javascript-yellow"> <img src="https://img.shields.io/badge/license-MIT-success"> 
+![Repository Size](https://img.shields.io/github/repo-size/hexascript/hexa) 
+![Lines of Codes](https://img.shields.io/tokei/lines/github.com/hexascript/hexa)
+</p>
 
 [Hexa](https://github.com/hexascript/hexa) is a cross-platform framework for creating mobile, desktop, and progressive web app with ES6+ JavaScript. You can develop apps that can run on Android, iOS, Linux, macOS, Windows and Web from a single shared codebase.
 
