@@ -8,7 +8,7 @@
 
 * **Structured.** All code and packages are structured, making it easy to find the libraries you need.
 * **Route.** Make your render multiple pages easily.
-* **Widget.** Bundled with widgets to make it easier to create UI
+* **Widget.** Bundled widgets UI to make it easier with [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)
 * **Simple.** Make your work easier and faster.
 * **Cross-Platform.** Your apps can run on Android, iOS, Linux, MacOS, Windows, and Web Apps.
 
