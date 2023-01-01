@@ -1,6 +1,24 @@
 import '../public/js/tailwind.js'
 
 export function AppBar(data) {
+  var browser = window.navigator.standalone,
+    userAgent = window.navigator.userAgent.toLowerCase(),
+    safari = /safari/.test(userAgent),
+    ios = /iphone|ipod|ipad/.test(userAgent)
+  
+  if (ios) {
+    if (!standalone && safari) {
+      var paddingtop = "4"
+    } else if (!standalone && !safari) {
+      var paddingtop = "11"
+    }
+  } else {
+    if (userAgent.includes('wv')) {
+      var paddingtop = "11"
+    } else {
+      var paddingtop = "4"
+    }
+  }
   if (data.backgroundColor == null) {
     var backgroundColor = "bg-slate-50"
   } else {
@@ -16,7 +34,7 @@ export function AppBar(data) {
   }else{
        var backbutton = ''
   }
-  return `<div class="relative sticky top-0 rounded-b-1xl h-9 ${backgroundColor} border-b shadow p-3 pt-11 pb-10 ${textColor} ${data.class}">
+  return `<div class="relative sticky top-0 rounded-b-1xl h-9 ${backgroundColor} border-b shadow p-3 pt-${paddingtop} pb-10 ${textColor} ${data.class}">
          <div class="mb-4 flex items-center justify-start">${backbutton}
          <h2 class="font-medium ml-3 text-lg">${data.text}</h2>
          </div>
