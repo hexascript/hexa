@@ -44,20 +44,20 @@ $ hexa --build [android|windows|web]
 
 ### app.js ###
 ```js
-import App from './hexa/core.js'
+import Hexa from './hexa/core.js'
 import Home from './views/home.js'
 
 const Main = function() {
-    App.route('/', Home)
+    Hexa.route('/', Home)
 }
 
-App.ready(Main)
+Hexa.ready(Main)
 
 ```
 
 ### views/home.js ###
 ```js
-import DOM from '../hexa/dom.js'
+import HexaDOM from '../hexa/dom.js'
 import {AppBar} from '../hexa/ui.js'
 
 export default function() {
@@ -75,6 +75,6 @@ export default function() {
        </Content>
     </View>`
   
-  DOM.render("#root", Html)
+  HexaDOM.render("#root", Html)
 }
 ```

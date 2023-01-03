@@ -1,4 +1,4 @@
-import DOM from '../hexa/dom.js'
+import HexaDOM from '../hexa/dom.js'
 import {AppBar} from '../hexa/ui.js'
 
 export default function() {
@@ -16,5 +16,5 @@ export default function() {
        </Content>
     </View>`
   
-  DOM.render("#root", Html)
+  HexaDOM.render("#root", Html)
 }
