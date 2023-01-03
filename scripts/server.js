@@ -8,7 +8,7 @@ exports.main = function() {
 	process.on('uncaughtException', err => console.error('uncaughtException', err))
 	process.on('unhandledRejection', err => console.error('unhandledRejection', err))
 
-	const publicFolder = process.cwd() + '\\src\\'
+	const publicFolder = process.cwd() + '/src/'
 	const port = "1337"
 
 	const mediaTypes = {
