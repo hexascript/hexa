@@ -77,6 +77,22 @@ export function TextBox(data) {
         <input name="${data.name}" type="${data.type}" id="${data.id}" class="${backgroundColor} ${borderColor} ${textColor} text-sm rounded-lg block w-full p-2.5" placeholder="${data.placeHolder}" ${readonly}>`
 }
 
+export function Button(data) {
+  if (data.backgroundColor == null) {
+    var backgroundColor = "bg-blue-500"
+  } else {
+    var backgroundColor = `bg-${data.backgroundColor}`
+  }
+  if (data.textColor == null) {
+    var textColor = "text-white"
+  } else {
+    var textColor = `text-${data.textColor}`
+  }
+  return `<button id="${data.id}" class="w-full ${backgroundColor} ${textColor} font-bold py-2 px-4 rounded-2xl">
+    ${data.text}
+  </button>`
+}
+
 export function SplashScreen(data) {
   var browser = window.navigator.standalone,
     userAgent = window.navigator.userAgent.toLowerCase(),
