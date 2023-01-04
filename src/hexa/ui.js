@@ -78,10 +78,20 @@ export function TextBox(data) {
 }
 
 export function splashScreen(data) {
+  if (data.backgroundColor == null) {
+    var backgroundColor = "bg-gray-50"
+  } else {
+    var backgroundColor = `bg-${data.backgroundColor}`
+  }
+  if (data.textColor == null) {
+    var textColor = "text-gray-900"
+  } else {
+    var textColor = `text-${data.textColor}`
+  }
   window.setTimeout(function() {
     location.href = '#' + data.redirect
   }, 3000)
-  return `<style>.loading svg{margin:auto}.loading{display:grid;color:#fff;text-transform:uppercase;font-family:Roboto,sans-serif;font-size:1.5em;text-shadow:2px 2px 10px rgba(0,0,0,.2);padding:100px;}@keyframes dots{50%{transform:translateY(-.4rem)}100%{transform:translateY(0)}}@keyframes rotation{from{transform:rotate(0)}to{transform:rotate(359deg)}}.spinner{transform-origin:50% 50%;animation:2s linear infinite rotation}.d{animation:1.5s ease-out infinite dots}.d-2{animation-delay:.5s}.d-3{animation-delay:1s}span{display:inline-block}</style><div class="bg-${data.backgroundColor} loading">
+  return `<style>.loading svg{margin:auto}.loading{display:grid;text-transform:uppercase;font-family:Roboto,sans-serif;font-size:1.5em;text-shadow:2px 2px 10px rgba(0,0,0,.2);padding:100px;}@keyframes dots{50%{transform:translateY(-.4rem)}100%{transform:translateY(0)}}@keyframes rotation{from{transform:rotate(0)}to{transform:rotate(359deg)}}.spinner{transform-origin:50% 50%;animation:2s linear infinite rotation}.d{animation:1.5s ease-out infinite dots}.d-2{animation-delay:.5s}.d-3{animation-delay:1s}span{display:inline-block}</style><div class="bg-${backgroundColor} text-${textColor} loading">
               <svg width="114px" height="114px" xmlns="http://www.w3.org/2000/svg">
                         <g fill="#1684D5" fill-rule="nonzero">
                             <path d="M89.563 72.011c-2.319 0-7.352-.438-26.297 4.189s-24.969 7.93-26.881 8.932c-2.636 1.384-2.378 2.368-2.378 2.368 9.321 6.832 21.285 9.153 32.547 6.316C77.817 90.978 87.17 83.286 92 72.888c-.02-.03-.258-.887-2.437-.877zM93.88 48.648c-1.572-1.12-4.371-3.963-32.672 2.12-28.3 6.083-38.998 14.138-39.656 14.634A3.965 3.965 0 0 0 20 67.76 38.59 38.59 0 0 0 30.982 86a2.133 2.133 0 0 1 .904-1.486 39.347 39.347 0 0 1 6.935-3.716 68.138 68.138 0 0 1 8.163-2.744s2.377-5.548 2.662-6.252c.25-.568.531-1.12.845-1.654a4.275 4.275 0 0 1 1.965-1.17c.854-.317 11.355-3.12 17.682-4.28 6.326-1.159 14.646-2.556 19.312-2.724 4.47-.149 5.108 1.12 5.157 1.228a38.555 38.555 0 0 0-.688-14.554h-.039z"/>
