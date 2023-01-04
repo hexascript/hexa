@@ -77,7 +77,7 @@ export function TextBox(data) {
         <input name="${data.name}" type="${data.type}" id="${data.id}" class="${backgroundColor} ${borderColor} ${textColor} text-sm rounded-lg block w-full p-2.5" placeholder="${data.placeHolder}" ${readonly}>`
 }
 
-export function splashScreen(data) {
+export function SplashScreen(data) {
   if (data.backgroundColor == null) {
     var backgroundColor = "bg-gray-50"
   } else {
