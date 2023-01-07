@@ -63,6 +63,11 @@ export function TextBox(data) {
   } else {
     var borderColor = `border border-${data.borderColor}`
   }
+  if (data.placeHolder == null) {
+    var placeHolder = ""
+  } else {
+    var placeHolder = data.placeHolder
+  }
   if(data.readOnly == "true") {
        var readonly = "readonly"
   }else{
@@ -75,10 +80,10 @@ export function TextBox(data) {
   }
   if(data.type == "textarea") {
     return `${labelText}
-    <textarea name="${data.name}" id="${data.id}" rows="4" class="block p-2.5 w-full text-sm ${backgroundColor} ${textColor} rounded-lg ${borderColor}" placeholder="${data.placeHolder}"></textarea>`
+    <textarea name="${data.name}" id="${data.id}" rows="4" class="block p-2.5 w-full text-sm ${backgroundColor} ${textColor} rounded-lg ${borderColor}" placeholder="${placeHolder}"></textarea>`
   }else{
     return `${labelText}
-        <input name="${data.name}" type="${data.type}" id="${data.id}" class="${backgroundColor} ${borderColor} ${textColor} text-sm rounded-lg block w-full p-2.5" placeholder="${data.placeHolder}" ${readonly}>`
+        <input name="${data.name}" type="${data.type}" id="${data.id}" class="${backgroundColor} ${borderColor} ${textColor} text-sm rounded-lg block w-full p-2.5" placeholder="${placeHolder}" ${readonly}>`
   }
 }
 
