@@ -1,12 +1,10 @@
 #!/usr/bin/env node
-
 import yargs from "yargs/yargs"
 import { hideBin } from "yargs/helpers"
 import fs from "fs"
 import paths from "path"
 import { ncp } from "ncp"
 import shell from "shelljs"
-
 const argv = yargs(hideBin(process.argv)).argv
 ncp.limit = 16
 

@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-
 import yargs from "yargs/yargs"
 import { hideBin } from "yargs/helpers"
 import fs from "fs"
 import axios from "axios"
-
 const argv = yargs(hideBin(process.argv)).argv
 
 exports.main = function() {

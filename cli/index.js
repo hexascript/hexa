@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import yargs from "yargs/yargs"
 import { hideBin } from "yargs/helpers"
 import server from "./server.js"
@@ -11,15 +10,15 @@ import windows from "./windows.js"
 const argv = yargs(hideBin(process.argv)).argv
 
 if (argv.server != null) {
-	server.main()
+  server.main()
 }
 
 if (argv.create != null) {
-	create.main()
+  create.main()
 }
 
 if (argv.install != null) {
-	packages.main()
+  packages.main()
 }
 
 if (argv.build == "android") {
