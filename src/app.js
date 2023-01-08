@@ -1,5 +1,5 @@
 import Hexa from './hexa/core.js'
-import Home from './views/home.js'
+import Home from './pages/home.js'
 
 const Main = () => {
     Hexa.route('/', Home)

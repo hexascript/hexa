@@ -42,10 +42,10 @@ $ hexa --build [android|windows|web]
 
 ## Examples ##
 
-### app.js ###
+#### app.js ####
 ```js
 import Hexa from './hexa/core.js'
-import Home from './views/home.js'
+import Home from './pages/home.js'
 
 const Main = () => {
     Hexa.route('/', Home)
@@ -55,10 +55,10 @@ Hexa.ready(Main)
 
 ```
 
-### views/home.js ###
+#### pages/home.js ####
 ```js
 import HexaDOM from '../hexa/dom.js'
-import {AppBar} from '../hexa/ui.js'
+import { AppBar } from '../hexa/ui.js'
 
 export default function() {
   const Header =
@@ -75,6 +75,6 @@ export default function() {
        </Content>
     </View>`
   
-  HexaDOM.render("#root", Html)
+  HexaDOM.render('#root', Html)
 }
 ```
