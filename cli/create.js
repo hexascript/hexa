@@ -7,17 +7,17 @@ import { ncp } from "ncp"
 const argv = yargs(hideBin(process.argv)).argv
 ncp.limit = 16
 
-exports.main = function() {
-  var project_dir = paths.join(paths.dirname(fs.realpathSync(__filename)), '../')
-  fs.mkdir(process.cwd() + '/' + argv.create, (error) => {
+export function main() {
+  const project_dir = paths.join(paths.dirname(fs.realpathSync(__filename)), '../');
+  fs.mkdir(`${process.cwd()}/${argv.create}`, (error) => {
     if (error) {
       console.log(error)
     } else {
-      fs.mkdir(process.cwd() + '/' + argv.create + '/src', (error) => {
+      fs.mkdir(`${process.cwd()}/${argv.create}/src`, (error) => {
         if (error) {
           console.log(error)
         } else {
-          fs.writeFile(argv.create + "/project.json", `{
+          fs.writeFile(`${argv.create}/project.json`, `{
           "android" : {
               "applicationId": "com.example.app",
               "appName": "Example Project",
@@ -34,8 +34,8 @@ exports.main = function() {
             if (err) console.log(err)
             console.log("[+] Add project.json.")
           })
-          ncp(project_dir + '/src', argv.create + '/src',
-            function(err) {
+          ncp(`${project_dir}/src`, `${argv.create}/src`,
+            err => {
               if (err) {
                 return console.error(err)
               }

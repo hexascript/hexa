@@ -3,11 +3,11 @@ import http from "http"
 import fs from "fs"
 import path from "path"
 
-exports.main = function() {
+export function main() {
 	process.on('uncaughtException', err => console.error('uncaughtException', err))
 	process.on('unhandledRejection', err => console.error('unhandledRejection', err))
 
-	const publicFolder = process.cwd() + '/src/'
+	const publicFolder = `${process.cwd()}/src/`
 	const port = "1337"
 
 	const mediaTypes = {
@@ -16,13 +16,13 @@ exports.main = function() {
 		js: 'text/javascript',
 		css: 'text/css',
 	}
-	const server = http.createServer(function(request, response) {
+	const server = http.createServer((request, response) => {
 		if (request.url == "/") {
 			request.url = "index.html"
 		}
-		console.log(request.method + ' ' + request.url)
+		console.log(`${request.method} ${request.url}`)
 		const filepath = path.join(publicFolder, request.url)
-		fs.readFile(filepath, function(err, data) {
+		fs.readFile(filepath, (err, data) => {
 			if (err) {
 				response.statusCode = 404
 				return response.end('File not found or you made an invalid request.')
@@ -44,7 +44,7 @@ exports.main = function() {
 		socket.end('HTTP/1.1 400 Bad Request\r\n\r\n')
 	})
 
-	server.listen(port, '127.0.0.1', function() {
+	server.listen(port, '127.0.0.1', () => {
 		console.log(`Server running on http://127.0.0.1:${port}\n👨‍🔧 Development server is online.`)
 	})
 }
