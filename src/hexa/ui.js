@@ -1,11 +1,11 @@
 import '../public/js/tailwind.js'
 
 function isWebview() {
-  var browser = window.navigator.standalone,
-    userAgent = window.navigator.userAgent.toLowerCase(),
-    safari = /safari/.test(userAgent),
-    ios = /iphone|ipod|ipad/.test(userAgent)
-  
+  const browser = window.navigator.standalone;
+  const userAgent = window.navigator.userAgent.toLowerCase();
+  const safari = /safari/.test(userAgent);
+  const ios = /iphone|ipod|ipad/.test(userAgent);
+
   if(ios) {
     if(!standalone && safari) {
       return false
@@ -27,17 +27,17 @@ export function AppBar(data) {
   }else{
     var paddingtop = '4'
   }
-  if (data.backgroundColor == null) {
+  if(data.backgroundColor == null) {
     var backgroundColor = 'bg-slate-50'
   } else {
     var backgroundColor = `bg-${data.backgroundColor}`
   }
-  if (data.textColor == null) {
+  if(data.textColor == null) {
     var textColor = 'text-slate-800'
   } else {
     var textColor = `text-${data.textColor}`
   }
-  if (data.backButton == 'true') {
+  if(data.backButton == 'true') {
        var backbutton = `<div onclick="history.back()" class="hover:text-slate-500"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></div>`
   }else{
        var backbutton = ''
@@ -56,22 +56,22 @@ export function Alerts(data) {
 }
 
 export function TextBox(data) {
-  if (data.backgroundColor == null) {
+  if(data.backgroundColor == null) {
     var backgroundColor = 'bg-gray-50'
   } else {
     var backgroundColor = `bg-${data.backgroundColor}`
   }
-  if (data.textColor == null) {
+  if(data.textColor == null) {
     var textColor = 'text-gray-900'
   } else {
     var textColor = `text-${data.textColor}`
   }
-  if (data.borderColor == null) {
+  if(data.borderColor == null) {
     var borderColor = 'border border-gray-300'
   } else {
     var borderColor = `border border-${data.borderColor}`
   }
-  if (data.placeHolder == null) {
+  if(data.placeHolder == null) {
     var placeHolder = ''
   } else {
     var placeHolder = data.placeHolder
@@ -96,14 +96,14 @@ export function TextBox(data) {
 }
 
 export function Button(data) {
-  if (data.backgroundColor == null) {
+  if(data.backgroundColor == null) {
     var backgroundColor = 'bg-blue-500'
-  } else {
+  }else{
     var backgroundColor = `bg-${data.backgroundColor}`
   }
-  if (data.textColor == null) {
+  if(data.textColor == null) {
     var textColor = 'text-white'
-  } else {
+  }else{
     var textColor = `text-${data.textColor}`
   }
   return `<button id="${data.id}" class="w-full ${backgroundColor} ${textColor} font-bold py-2 px-4 rounded-2xl">
@@ -112,23 +112,23 @@ export function Button(data) {
 }
 
 export function SplashScreen(data) {
-  if (isWebview() == true) {
+  if(isWebview() == true) {
     var paddingtop = '11'
   } else {
     var paddingtop = '4'
   }
-  if (data.backgroundColor == null) {
+  if(data.backgroundColor == null) {
     var backgroundColor = 'bg-gray-50'
   } else {
     var backgroundColor = `bg-${data.backgroundColor}`
   }
-  if (data.textColor == null) {
+  if(data.textColor == null) {
     var textColor = 'text-gray-900'
-  } else {
+  }else{
     var textColor = `text-${data.textColor}`
   }
-  window.setTimeout(function() {
-    location.href = '#' + data.redirect
+  window.setTimeout(() => {
+    location.href = `#${data.redirect}`
   }, 3000)
   return `<style>.loading svg{margin:auto}.loading{display:grid;text-transform:uppercase;font-family:Roboto,sans-serif;font-size:1.5em;text-shadow:2px 2px 10px rgba(0,0,0,.2);padding:100px;}@keyframes dots{50%{transform:translateY(-.4rem)}100%{transform:translateY(0)}}@keyframes rotation{from{transform:rotate(0)}to{transform:rotate(359deg)}}.spinner{transform-origin:50% 50%;animation:2s linear infinite rotation}.d{animation:1.5s ease-out infinite dots}.d-2{animation-delay:.5s}.d-3{animation-delay:1s}span{display:inline-block}</style><div class="pt-${paddingtop} ${backgroundColor} ${textColor} text-center loading">
   <center>
