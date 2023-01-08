@@ -1,10 +1,10 @@
 import '../public/js/tailwind.js'
 
 function isWebview() {
-  const browser = window.navigator.standalone;
-  const userAgent = window.navigator.userAgent.toLowerCase();
-  const safari = /safari/.test(userAgent);
-  const ios = /iphone|ipod|ipad/.test(userAgent);
+  const browser = window.navigator.standalone
+  const userAgent = window.navigator.userAgent.toLowerCase()
+  const safari = /safari/.test(userAgent)
+  const ios = /iphone|ipod|ipad/.test(userAgent)
 
   if(ios) {
     if(!standalone && safari) {
@@ -130,7 +130,7 @@ export function SplashScreen(data) {
   window.setTimeout(() => {
     location.href = `#${data.redirect}`
   }, 3000)
-  return `<style>.loading svg{margin:auto}.loading{display:grid;text-transform:uppercase;font-family:Roboto,sans-serif;font-size:1.5em;text-shadow:2px 2px 10px rgba(0,0,0,.2);padding:100px;}@keyframes dots{50%{transform:translateY(-.4rem)}100%{transform:translateY(0)}}@keyframes rotation{from{transform:rotate(0)}to{transform:rotate(359deg)}}.spinner{transform-origin:50% 50%;animation:2s linear infinite rotation}.d{animation:1.5s ease-out infinite dots}.d-2{animation-delay:.5s}.d-3{animation-delay:1s}span{display:inline-block}</style><div class="pt-${paddingtop} ${backgroundColor} ${textColor} text-center loading">
+  return `<style>.loading{display:grid;text-transform:uppercase;font-family:Roboto,sans-serif;font-size:1.5em;text-shadow:2px 2px 10px rgba(0,0,0,.2);padding:100px;}@keyframes dots{50%{transform:translateY(-.4rem)}100%{transform:translateY(0)}}@keyframes rotation{from{transform:rotate(0)}to{transform:rotate(359deg)}}.spinner{transform-origin:50% 50%;animation:2s linear infinite rotation}.d{animation:1.5s ease-out infinite dots}.d-2{animation-delay:.5s}.d-3{animation-delay:1s}span{display:inline-block}</style><div class="pt-${paddingtop} ${backgroundColor} ${textColor} text-center loading">
   <center>
               <img style="float:center;text-align:center;width:100px;height:100px;" src="${data.image}">
               <p class="p-2">${data.text}<span class="d">.</span><span class="d d-2">.</span><span class="d d-3">.</span></p></center>`
