@@ -5,7 +5,7 @@
   "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install && babel scripts/** -d bin && chmod +x bin/index.js && npm install -g ."
+    "build": "npm install && babel cli/** -d bin && chmod +x bin/index.js && npm install -g ."
   },
   "repository": {
     "type": "git",
