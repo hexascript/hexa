@@ -1,10 +1,8 @@
 const HexaCore = {
-   
    ready(func) {
        window.addEventListener('hashchange', func)
        window.addEventListener('load', func)
    },
-   
    route(params, func) {
        var url = location.hash.slice(1)
        if(params == '/') {
@@ -14,11 +12,9 @@ const HexaCore = {
           func.call()
        }
    },
-   
    redirect(url) {
        location.href = '#' + url
    }
-  
 }
 
 export default HexaCore

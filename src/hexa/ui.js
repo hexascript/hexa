@@ -1,31 +1,39 @@
 import '../public/js/tailwind.js'
 
-export function AppBar(data) {
+function isWebview() {
   var browser = window.navigator.standalone,
     userAgent = window.navigator.userAgent.toLowerCase(),
     safari = /safari/.test(userAgent),
     ios = /iphone|ipod|ipad/.test(userAgent)
   
-  if (ios) {
-    if (!standalone && safari) {
-      var paddingtop = "4"
-    } else if (!standalone && !safari) {
-      var paddingtop = "11"
+  if(ios) {
+    if(!standalone && safari) {
+      return false
+    }else if(!standalone && !safari) {
+      return true
     }
-  } else {
-    if (userAgent.includes('wv')) {
-      var paddingtop = "11"
-    } else {
-      var paddingtop = "4"
+  }else{
+    if(userAgent.includes('wv')) {
+      return true
+    }else{
+      return false
     }
   }
+}
+
+export function AppBar(data) {
+  if(isWebview() == true) {
+    var paddingtop = '11'
+  }else{
+    var paddingtop = '4'
+  }
   if (data.backgroundColor == null) {
-    var backgroundColor = "bg-slate-50"
+    var backgroundColor = 'bg-slate-50'
   } else {
     var backgroundColor = `bg-${data.backgroundColor}`
   }
   if (data.textColor == null) {
-    var textColor = "text-slate-800"
+    var textColor = 'text-slate-800'
   } else {
     var textColor = `text-${data.textColor}`
   }
@@ -49,36 +57,36 @@ export function Alerts(data) {
 
 export function TextBox(data) {
   if (data.backgroundColor == null) {
-    var backgroundColor = "bg-gray-50"
+    var backgroundColor = 'bg-gray-50'
   } else {
     var backgroundColor = `bg-${data.backgroundColor}`
   }
   if (data.textColor == null) {
-    var textColor = "text-gray-900"
+    var textColor = 'text-gray-900'
   } else {
     var textColor = `text-${data.textColor}`
   }
   if (data.borderColor == null) {
-    var borderColor = "border border-gray-300"
+    var borderColor = 'border border-gray-300'
   } else {
     var borderColor = `border border-${data.borderColor}`
   }
   if (data.placeHolder == null) {
-    var placeHolder = ""
+    var placeHolder = ''
   } else {
     var placeHolder = data.placeHolder
   }
-  if(data.readOnly == "true") {
-       var readonly = "readonly"
+  if(data.readOnly == 'true') {
+       var readonly = 'readonly'
   }else{
-       var readonly = ""
+       var readonly = ''
   }
   if(data.labelText == null) {
-    var labelText = ""
+    var labelText = ''
   }else{
     var labelText = `<label class="block mb-2 text-sm font-medium ${textColor} dark:text-gray-300">${data.labelText}</label>`
   }
-  if(data.type == "textarea") {
+  if(data.type == 'textarea') {
     return `${labelText}
     <textarea name="${data.name}" id="${data.id}" rows="4" class="block p-2.5 w-full text-sm ${backgroundColor} ${textColor} rounded-lg ${borderColor}" placeholder="${placeHolder}"></textarea>`
   }else{
@@ -89,12 +97,12 @@ export function TextBox(data) {
 
 export function Button(data) {
   if (data.backgroundColor == null) {
-    var backgroundColor = "bg-blue-500"
+    var backgroundColor = 'bg-blue-500'
   } else {
     var backgroundColor = `bg-${data.backgroundColor}`
   }
   if (data.textColor == null) {
-    var textColor = "text-white"
+    var textColor = 'text-white'
   } else {
     var textColor = `text-${data.textColor}`
   }
@@ -104,31 +112,18 @@ export function Button(data) {
 }
 
 export function SplashScreen(data) {
-  var browser = window.navigator.standalone,
-    userAgent = window.navigator.userAgent.toLowerCase(),
-    safari = /safari/.test(userAgent),
-    ios = /iphone|ipod|ipad/.test(userAgent)
-  
-  if (ios) {
-    if (!standalone && safari) {
-      var paddingtop = "4"
-    } else if (!standalone && !safari) {
-      var paddingtop = "11"
-    }
+  if (isWebview() == true) {
+    var paddingtop = '11'
   } else {
-    if (userAgent.includes('wv')) {
-      var paddingtop = "11"
-    } else {
-      var paddingtop = "4"
-    }
+    var paddingtop = '4'
   }
   if (data.backgroundColor == null) {
-    var backgroundColor = "bg-gray-50"
+    var backgroundColor = 'bg-gray-50'
   } else {
     var backgroundColor = `bg-${data.backgroundColor}`
   }
   if (data.textColor == null) {
-    var textColor = "text-gray-900"
+    var textColor = 'text-gray-900'
   } else {
     var textColor = `text-${data.textColor}`
   }
