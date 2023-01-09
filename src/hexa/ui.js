@@ -100,6 +100,30 @@ export function TextBox(data) {
   }
 }
 
+export function Switch(data) {
+  if (data.checked == 'true') {
+    var checked = 'checked'
+  } else {
+    var checked = ''
+  }
+  return ` <dh-component>
+                      <div class="w-16 h-8 cursor-pointer rounded-full relative shadow-sm">
+                              <input aria-label="switchbox" type="checkbox" name="${data.name}" id="${data.id}" class="mt-2 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:bg-blue-600 focus:outline-none checkbox w-4 h-4 rounded-full bg-white absolute m-1 shadow-sm appearance-none cursor-pointer" ${checked}/>
+                              <label for="${data.id}" class="toggle-label bg-gray-200 block w-16 h-8 overflow-hidden rounded-full bg-gray-300 cursor-pointer"></label>
+                          </div>
+                          <style>
+                              .checkbox:checked {
+                                  /* Apply class right-0*/
+                                  right: 0;
+                              }
+                              .checkbox:checked + .toggle-label {
+                                  /* Apply class bg-indigo-700 */
+                                  background-color: #2F68FF;
+                              }
+                          </style>
+                  </dh-component>`
+}
+
 export function Button(data) {
   if(data.backgroundColor == null) {
     var backgroundColor = 'bg-blue-500'
