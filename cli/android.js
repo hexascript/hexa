@@ -8,7 +8,7 @@ import { ncp } from "ncp"
 const argv = yargs(hideBin(process.argv)).argv
 ncp.limit = 16
 
-export function main() {
+exports.main = function () {
   const project_dir = paths.join(paths.dirname(fs.realpathSync(__filename)), '../');
   fs.rmSync(`${process.cwd()}/android`, { recursive: true, force: true })
   fs.mkdir(`${process.cwd()}/android`, (error) => {

@@ -9,7 +9,7 @@ import shell from "shelljs"
 const argv = yargs(hideBin(process.argv)).argv
 ncp.limit = 16
 
-export function main() {
+exports.main = function () {
   const project_dir = paths.join(paths.dirname(fs.realpathSync(__filename)), '../');
   fs.rmSync(`${process.cwd()}/windows`, { recursive: true, force: true })
   fs.mkdir(`${process.cwd()}/windows`, (error) => {

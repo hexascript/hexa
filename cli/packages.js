@@ -6,7 +6,7 @@ import fs from "fs"
 import axios from "axios"
 const argv = yargs(hideBin(process.argv)).argv
 
-export function main() {
+exports.main = function () {
 	let packages = argv.install;
 	packages = packages.replace("/", "-")
 	if (packages.split('.').pop() == "js") {

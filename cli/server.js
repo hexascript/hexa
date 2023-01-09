@@ -4,7 +4,7 @@ import http from "http"
 import fs from "fs"
 import path from "path"
 
-export function main() {
+exports.main = function () {
 	process.on('uncaughtException', err => console.error('uncaughtException', err))
 	process.on('unhandledRejection', err => console.error('unhandledRejection', err))
 
