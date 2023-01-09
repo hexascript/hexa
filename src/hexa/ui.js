@@ -37,6 +37,11 @@ export function AppBar(data) {
   } else {
     var textColor = `text-${data.textColor}`
   }
+  if (data.text == null) {
+    var text = 'AppBar'
+  } else {
+    var text = data.text
+  }
   if(data.backButton == 'true') {
        var backbutton = `<div onclick="history.back()" class="hover:text-slate-500"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></div>`
   }else{
@@ -44,7 +49,7 @@ export function AppBar(data) {
   }
   return `<div class="relative sticky top-0 rounded-b-1xl h-9 ${backgroundColor} border-b shadow p-3 pt-${paddingtop} pb-10 ${textColor} ${data.class}">
          <div class="mb-4 flex items-center justify-start">${backbutton}
-         <h2 class="font-medium ml-3 text-lg">${data.text}</h2>
+         <h2 class="font-medium ml-3 text-lg">${text}</h2>
          </div>
          <div class="space-y-2 text-center"></div>
          </div>`
@@ -109,6 +114,40 @@ export function Button(data) {
   return `<button id="${data.id}" class="w-full ${backgroundColor} ${textColor} font-bold py-2 px-4 rounded-2xl">
     ${data.text}
   </button>`
+}
+
+export function MenuList(data) {
+  if (data.text == null) {
+    var text = 'Menu List'
+  } else {
+    var text = data.text
+  }
+  if (data.description == null) {
+    var description = 'Menu List Description'
+  } else {
+    var description = data.description
+  }
+  if (data.backgroundColor == null) {
+    var backgroundColor = 'bg-blue-500'
+  } else {
+    var backgroundColor = `bg-${data.backgroundColor}`
+  }
+  if (data.textColor == null) {
+    var textColor = 'text-white'
+  } else {
+    var textColor = `text-${data.textColor}`
+  }
+  return `<div class="bg-white p-3 rounded-xl shadow-xl flex items-center justify-between mt-4">
+                 <div class="flex space-x-6 items-center">
+                   <img src="${data.image}" class="w-auto w-16 h-16 rounded-lg">
+                   <a href="#${data.location}">
+                     <div>
+                       <h3 class="font-semibold text-base">${text}</h3>
+                       <p class="font-normal text-sm text-gray-400">${description}</p>
+                     </div>
+                   </a>
+                 </div>
+               </div>`
 }
 
 export function SplashScreen(data) {
