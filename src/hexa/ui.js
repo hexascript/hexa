@@ -128,7 +128,7 @@ export function MenuList(data) {
     var description = data.description
   }
   if (data.backgroundColor == null) {
-    var backgroundColor = 'bg-blue-500'
+    var backgroundColor = 'bg-white'
   } else {
     var backgroundColor = `bg-${data.backgroundColor}`
   }
@@ -137,7 +137,7 @@ export function MenuList(data) {
   } else {
     var textColor = `text-${data.textColor}`
   }
-  return `<div class="bg-white p-3 rounded-xl shadow-xl flex items-center justify-between mt-4">
+  return `<div class="${backgroundColor} p-3 rounded-xl shadow-xl flex items-center justify-between mt-4">
                  <div class="flex space-x-6 items-center">
                    <img src="${data.image}" class="w-auto w-16 h-16 rounded-lg">
                    <a href="#${data.location}">
