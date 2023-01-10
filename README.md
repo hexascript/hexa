@@ -15,7 +15,7 @@
 * **Simple.** Make your work easier and faster with bundling library.
 * **Cross-Platform.** Your apps can run on Android, iOS, Linux, MacOS, Windows, and Web Apps.
 
-## Documentation ##
+## 🚀 Getting Started ##
 <details> 
  <summary>Installation</summary>
  
@@ -83,4 +83,54 @@
    HexaDOM.render('#root', Html)
  }
  ```
+</details>
+
+## 📚 UI/UX Library ##
+<details> 
+ <summary>AppBar</summary>
+
+<img src="https://i.ibb.co/DYF72dd/Screenshot-2023-01-10-18-06-59-34.jpg">
+
+Attributes
+* text (string)
+* backButton (boolean)
+* backgroundColor (string)
+* textColor (string)
+
+Import
+```js
+import { AppBar } from '../hexa/ui.js
+```
+
+Usage
+```js
+AppBar({
+  text: 'Example Project',
+  backButton: 'true'
+})
+```
+</details>
+
+<details> 
+ <summary>Button</summary>
+
+<img src="https://i.ibb.co/thRZHNw/Screenshot-2023-01-10-18-24-43-67.jpg">
+
+Attributes
+* text (string)
+* backgroundColor (string)
+* textColor (string)
+* disabled (boolean)
+
+Import
+```js
+import { Button } from '../hexa/ui.js
+```
+
+Usage
+```js
+Button({
+  text: 'Button'
+})
+```
 </details>
