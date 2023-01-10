@@ -99,7 +99,7 @@ Attributes
 
 Import
 ```js
-import { AppBar } from '../hexa/ui.js
+import { AppBar } from '../hexa/ui.js'
 ```
 
 Usage
@@ -112,11 +112,41 @@ AppBar({
 </details>
 
 <details> 
+ <summary>Alerts</summary>
+
+<img src="https://i.ibb.co/3vNbWwQ/Screenshot-2023-01-10-18-38-25-80.jpg">
+
+Attributes
+* id (string)
+* text (string)
+* backgroundColor (string)
+* textColor (string)
+* borderColor (string)
+* display (boolean)
+
+Import
+```js
+import { Alerts } from '../hexa/ui.js'
+```
+
+Usage
+```js
+Alerts({
+  text: 'Widget Alerts.',
+  backgroundColor: 'red-100',
+  textColor: 'red-700',
+  borderColor: 'red-400'
+})
+```
+</details>
+
+<details> 
  <summary>Button</summary>
 
 <img src="https://i.ibb.co/thRZHNw/Screenshot-2023-01-10-18-24-43-67.jpg">
 
 Attributes
+* id (string)
 * text (string)
 * backgroundColor (string)
 * textColor (string)
@@ -124,7 +154,7 @@ Attributes
 
 Import
 ```js
-import { Button } from '../hexa/ui.js
+import { Button } from '../hexa/ui.js'
 ```
 
 Usage
