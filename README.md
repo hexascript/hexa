@@ -6,15 +6,16 @@
 
 [Hexa](https://github.com/hexascript/hexa) is a cross-platform framework for creating mobile, desktop, and progressive web app with ES6+ JavaScript. You can develop apps that can run on Android, iOS, Linux, macOS, Windows and Web from a single shared codebase.
 
-[Hexa](https://github.com/hexascript/hexa) is under development and still update.
+[Hexa](https://github.com/hexascript/hexa) is under development and still update every day.
 
-* **Structured.** All code and packages are structured, making it easy to find the libraries you need.
-* **Route.** Make your render multiple pages easily.
-* **Widget.** Bundled widgets UI to make it easier with [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)
-* **Simple.** Make your work easier and faster.
+* **100% JavaScript.** You only write JavaScript code.
+* **Structured.** All code and packages are structured, making it easy to find the libraries you needed.
+* **Router.** Make your render multiple pages easily with route function.
+* **Widget.** Library UI to make your apps beautiful and easier with [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)
+* **Simple.** Make your work easier and faster with bundling library.
 * **Cross-Platform.** Your apps can run on Android, iOS, Linux, MacOS, Windows, and Web Apps.
 
-## Getting Started ##
+## Documentation ##
 <details> 
  <summary>Installation</summary>
  
@@ -44,7 +45,7 @@
 </details>
 
 <details> 
- <summary>Build & Compile</summary>
+ <summary>Examples</summary>
  
 #### app.js ####
  ```js
