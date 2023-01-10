@@ -85,7 +85,7 @@
  ```
 </details>
 
-## 📚 UI/UX Library ##
+## 📚 UI Components ##
 <details> 
  <summary>AppBar</summary>
 
@@ -218,6 +218,6 @@ TextBox({
   type: 'text',
   labelText: 'TextBox',
   placeHolder: 'Input TextBox'
-  })
+})
 ```
 </details>
