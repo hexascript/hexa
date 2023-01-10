@@ -17,6 +17,7 @@
 ## Getting Started ##
 <details> 
  <summary>Installation</summary>
+ 
  ```bash
  $ git clone https://github.com/hexascript/hexa
  $ cd hexa
@@ -26,6 +27,7 @@
 
 <details> 
  <summary>Create New Project</summary>
+ 
  ```bash
  $ hexa --create helloworld
  $ cd helloworld
@@ -35,6 +37,7 @@
 
 <details> 
  <summary>Build & Compile</summary>
+ 
 ```bash
  $ hexa --build [android|windows|web]
  ```
@@ -42,6 +45,7 @@
 
 <details> 
  <summary>Build & Compile</summary>
+ 
 #### app.js ####
  ```js
  import Hexa from './hexa/core.js'
