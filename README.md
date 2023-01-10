@@ -89,11 +89,11 @@
 
 | Platform  | Status |
 | ---------- | -----------|
-| Android   | <img src="https://shields.io/badge/-progress-important"   |
-| iOS   | <img src="https://shields.io/badge/-failed-critical"   |
-| Windows   | <img src="https://shields.io/badge/-success-success"   |
-| Linux   | <img src="https://shields.io/badge/-success-success"   |
-| MacOS   | <img src="https://shields.io/badge/-success-success"   |
+| Android   | <img src="https://shields.io/badge/-progress-important">   |
+| iOS   | <img src="https://shields.io/badge/-failed-critical">   |
+| Windows   | <img src="https://shields.io/badge/-success-success">   |
+| Linux   | <img src="https://shields.io/badge/-success-success">   |
+| MacOS   | <img src="https://shields.io/badge/-success-success">   |
 
 
 ## 📚 UI Components ##
