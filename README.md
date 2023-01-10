@@ -189,3 +189,35 @@ Switch({
 })
 ```
 </details>
+
+<details> 
+ <summary>TextBox</summary>
+
+<img src="https://i.ibb.co/g30knMR/Screenshot-2023-01-10-19-37-53-27.jpg">
+
+Attributes
+* id (string)
+* type (text|password|number|textarea)
+* labelText (string)
+* placeHolder (string)
+* name (string)
+* backgroundColor (string)
+* textColor (string)
+* borderColor (string)
+* readOnly (boolean)
+
+Import
+```js
+import { TextBox } from '../hexa/ui.js'
+```
+
+Usage
+```js
+TextBox({
+  id: 'textbox1',
+  type: 'text',
+  labelText: 'TextBox',
+  placeHolder: 'Input TextBox'
+  })
+```
+</details>
