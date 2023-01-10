@@ -15,66 +15,67 @@
 * **Cross-Platform.** Your apps can run on Android, iOS, Linux, MacOS, Windows, and Web Apps.
 
 ## Getting Started ##
+<details> 
+ <summary>Installation</summary>
+ ```bash
+ $ git clone https://github.com/hexascript/hexa
+ $ cd hexa
+ $ npm run build
+ ```
+</details>
 
-* [Installation]()
-* [Documentation]()
-* [Examples]()
-* [Development Guide]()
+<details> 
+ <summary>Create New Project</summary>
+ ```bash
+ $ hexa --create helloworld
+ $ cd helloworld
+ $ hexa --server
+ ```
+</details>
 
-## Installation
+<details> 
+ <summary>Build & Compile</summary>
 ```bash
-$ git clone https://github.com/hexascript/hexa
-$ cd hexa
-$ npm run build
-```
+ $ hexa --build [android|windows|web]
+ ```
+</details>
 
-## Create New Project ##
-```bash
-$ hexa --create helloworld
-$ cd helloworld
-$ hexa --server
-```
-
-## Build & Compile
-```bash
-$ hexa --build [android|windows|web]
-```
-
-## Examples ##
-
+<details> 
+ <summary>Build & Compile</summary>
 #### app.js ####
-```js
-import Hexa from './hexa/core.js'
-import Home from './pages/home.js'
-
-const Main = () => {
-    Hexa.route('/', Home)
-}
-
-Hexa.ready(Main)
-
-```
-
-#### pages/home.js ####
-```js
-import HexaDOM from '../hexa/dom.js'
-import { AppBar } from '../hexa/ui.js'
-
-export default function() {
-  const Header =
-  AppBar({
-    text: 'Example Project',
-    backButton: 'false'
-  })
-
-  const Html = `
-    <View>
-       ${Header}
-       <Content>
-          <h1>Hello World</h1>
-       </Content>
-    </View>`
-  
-  HexaDOM.render('#root', Html)
-}
-```
+ ```js
+ import Hexa from './hexa/core.js'
+ import Home from './pages/home.js'
+ 
+ const Main = () => {
+     Hexa.route('/', Home)
+ }
+ 
+ Hexa.ready(Main)
+ 
+ ```
+ 
+ #### pages/home.js ####
+ ```js
+ import HexaDOM from '../hexa/dom.js'
+ import { AppBar } from '../hexa/ui.js'
+ 
+ export default function() {
+   const Header =
+   AppBar({
+     text: 'Example Project',
+     backButton: 'false'
+   })
+ 
+   const Html = `
+     <View>
+        ${Header}
+        <Content>
+           <h1>Hello World</h1>
+        </Content>
+     </View>`
+   
+   HexaDOM.render('#root', Html)
+ }
+ ```
+</details>
