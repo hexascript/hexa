@@ -164,3 +164,28 @@ Button({
 })
 ```
 </details>
+
+<details> 
+ <summary>Switch</summary>
+
+<img src="https://i.ibb.co/ZWrbZwg/Screenshot-2023-01-10-19-26-03-71.jpg">
+
+Attributes
+* id (string)
+* name (string)
+* checked (boolean)
+
+Import
+```js
+import { Switch } from '../hexa/ui.js'
+```
+
+Usage
+```js
+Switch({
+  id: 'switch1',
+  name: 'switch1',
+  checked: 'true'
+})
+```
+</details>
