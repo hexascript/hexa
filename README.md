@@ -8,12 +8,12 @@
 
 [Hexa](https://github.com/hexascript/hexa) is under development and still update every day.
 
-* **100% JavaScript.** You only write JavaScript code.
-* **Structured.** All code and packages are structured, making it easy to find the libraries you needed.
-* **Router.** Make your render multiple pages easily with route function.
-* **Widget.** Library UI to make your apps beautiful and easier with [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)
-* **Simple.** Make your work easier and faster with bundling library.
-* **Cross-Platform.** Your apps can run on Android, iOS, Linux, MacOS, Windows, and Web Apps.
+* ❤️ **100% JavaScript.** You only write JavaScript code.
+* 🕵️ **Structured.** All code and packages are structured, making it easy to find the libraries you needed.
+* 🎈 **Router.** Make your render multiple pages easily with route function.
+* ✨ **Widget.** Library UI to make your apps beautiful and easier with [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)
+* ⚡ **Simple.** Make your work easier and faster with bundling library.
+* 📱 **Cross-Platform.** Your apps can run on Android, iOS, Linux, MacOS, Windows, and Web Apps.
 
 ## 🚀 Getting Started ##
 <details> 
@@ -30,7 +30,7 @@
 </details>
 
 <details> 
- <summary>Create New Project</summary>
+ <summary>New Project</summary>
  
  ```bash
  $ hexa --create helloworld
