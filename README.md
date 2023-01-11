@@ -19,6 +19,9 @@
 <details> 
  <summary>Installation</summary>
  
+ 
+ <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white">
+ 
  ```bash
  $ git clone https://github.com/hexascript/hexa
  $ cd hexa
@@ -38,8 +41,6 @@
 
 <details> 
  <summary>Build & Compile</summary>
- 
-<img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white">
 
 ```bash
  $ hexa --build [android|windows|web]
