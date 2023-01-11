@@ -91,9 +91,9 @@
 | ---------- | -----------| ---------- |
 | Android   | - | <img src="https://shields.io/badge/-progress-important">   |
 | iOS   | - | <img src="https://shields.io/badge/-failed-critical">   |
-| Windows  | [electron-packager](https://github.com/hexascript/hexa) | <img src="https://shields.io/badge/-success-success">   |
-| Linux  | [electron-packager](https://github.com/hexascript/hexa) | <img src="https://shields.io/badge/-success-success">   |
-| MacOS  | [electron-packager](https://github.com/hexascript/hexa) | <img src="https://shields.io/badge/-success-success">   |
+| Windows  | [electron-packager](https://github.com/electron/electron-packager) | <img src="https://shields.io/badge/-success-success">   |
+| Linux  | [electron-packager](https://github.com/electron/electron-packager) | <img src="https://shields.io/badge/-success-success">   |
+| MacOS  | [electron-packager](https://github.com/electron/electron-packager) | <img src="https://shields.io/badge/-success-success">   |
 
 
 ## 📚 UI Components ##
