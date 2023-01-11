@@ -89,11 +89,11 @@
 
 | Platform  | Compiler | Status |
 | ---------- | -----------| ---------- |
-| Android   | - | <img src="https://shields.io/badge/-progress-important">   |
-| iOS   | - | <img src="https://shields.io/badge/-failed-critical">   |
-| Windows  | [electron-packager](https://github.com/electron/electron-packager) | <img src="https://shields.io/badge/-success-success">   |
-| Linux  | [electron-packager](https://github.com/electron/electron-packager) | <img src="https://shields.io/badge/-success-success">   |
-| MacOS  | [electron-packager](https://github.com/electron/electron-packager) | <img src="https://shields.io/badge/-success-success">   |
+| <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white">   | - | <img src="https://shields.io/badge/-progress-important">   |
+| <img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white">   | - | <img src="https://shields.io/badge/-failed-critical">   |
+| <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"> | [electron-packager](https://github.com/electron/electron-packager) | <img src="https://shields.io/badge/-success-success">   |
+| <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">  | [electron-packager](https://github.com/electron/electron-packager) | <img src="https://shields.io/badge/-success-success">   |
+| <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white">  | [electron-packager](https://github.com/electron/electron-packager) | <img src="https://shields.io/badge/-success-success">   |
 
 
 ## 📚 UI Components ##
