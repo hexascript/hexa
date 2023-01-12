@@ -42,7 +42,7 @@ export function AppBar(data) {
   } else {
     var text = data.text
   }
-  if(data.backButton == 'true') {
+  if(data.backButton == true) {
        var backbutton = `<div onclick="history.back()" class="hover:text-slate-500"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></div>`
   }else{
        var backbutton = ''
@@ -81,7 +81,7 @@ export function TextBox(data) {
   } else {
     var placeHolder = data.placeHolder
   }
-  if(data.readOnly == 'true') {
+  if(data.readOnly == true) {
        var readonly = 'readonly'
   }else{
        var readonly = ''
@@ -101,7 +101,7 @@ export function TextBox(data) {
 }
 
 export function Switch(data) {
-  if (data.checked == 'true') {
+  if (data.checked == true) {
     var checked = 'checked'
   } else {
     var checked = ''
@@ -135,7 +135,12 @@ export function Button(data) {
   }else{
     var textColor = `text-${data.textColor}`
   }
-  return `<button id="${data.id}" class="w-full ${backgroundColor} ${textColor} font-bold py-2 px-4 rounded-2xl">
+  if (data.disabled == true) {
+    var disabled = 'disabled'
+  } else {
+    var disabled = ''
+  }
+  return `<button id="${data.id}" class="w-full ${backgroundColor} ${textColor} font-bold py-2 px-4 rounded-2xl" ${disabled}>
     ${data.text}
   </button>`
 }

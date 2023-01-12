@@ -5,7 +5,7 @@ export default function() {
   const Header =
   AppBar({
     text: 'Example Project',
-    backButton: 'false'
+    backButton: false
   })
 
   const Html = `

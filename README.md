@@ -72,7 +72,7 @@
    const Header =
    AppBar({
      text: 'Example Project',
-     backButton: 'false'
+     backButton: false
    })
  
    const Html = `
@@ -120,7 +120,7 @@ Usage
 ```js
 AppBar({
   text: 'Example Project',
-  backButton: 'true'
+  backButton: true
 })
 ```
 </details>
@@ -199,7 +199,7 @@ Usage
 Switch({
   id: 'switch1',
   name: 'switch1',
-  checked: 'true'
+  checked: true
 })
 ```
 </details>
