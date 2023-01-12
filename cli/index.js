@@ -26,3 +26,7 @@ if (argv.build == "android") {
 if (argv.build == "windows") {
   build.windows()
 }
+
+if (argv.build == "linux") {
+  build.linux()
+}

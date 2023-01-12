@@ -1,0 +1,16 @@
+{
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "build": {
+    "appId": "com.hexascript.app",
+    "compression": "maximum"
+  },
+  "devDependencies": {
+    "electron": "^21.2.3"
+  },
+  "dependencies": {
+    "modclean": "^3.0.0-beta.1"
+  }
+}

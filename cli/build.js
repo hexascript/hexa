@@ -77,7 +77,7 @@ exports.windows = function() {
           if (err) {
             return console.error(err)
           }
-          console.log('[+] Successfully create Windows project.')
+          console.log('[+] Successfully create windows project.')
           ncp(`${process.cwd()}/src`, `${process.cwd()}/windows`,
             err => {
               if (err) {
@@ -103,7 +103,55 @@ exports.windows = function() {
                       shell.exit(1);
                     } else {
                       shell.exec("npm install")
-                      shell.exec("electron-packager . app --platform win32 --arch x64 --overwrite --out '../dist/windows/'")
+                      shell.exec("electron-packager . app --platform win32 --arch x64 --overwrite --out '../dist/'")
+                    }
+                  })
+                })
+              })
+            })
+        })
+    }
+  })
+}
+
+exports.linux = function() {
+  fs.rmSync(`${process.cwd()}/linux`, { recursive: true, force: true })
+  fs.mkdir(`${process.cwd()}/linux`, (error) => {
+    if (error) {
+      console.log(error)
+    } else {
+      ncp(`${project_dir}/linux`, `${process.cwd()}/linux`,
+        err => {
+          if (err) {
+            return console.error(err)
+          }
+          console.log('[+] Successfully create linux project.')
+          ncp(`${process.cwd()}/src`, `${process.cwd()}/linux`,
+            err => {
+              if (err) {
+                return console.error(err)
+              }
+              console.log('[+] Successfully generate assets file.')
+              fs.readFile('project.json', (err, data) => {
+                if (err) throw err
+                let settings = JSON.parse(data)
+                fs.readFile(`${process.cwd()}/linux/main.js`, (err, buf) => {
+                  let data = buf.toString();
+                  data = data.replace('{{width}}', settings.windows.width)
+                    .replace('{{height}}', settings.windows.height)
+                  fs.writeFile(`${process.cwd()}/linux/main.js`, data, (err) => {
+                    if (err) console.log(err)
+                    console.log("[+] Create main.js to your project.")
+                    console.log("[+] Compiling to linux executable.")
+                    shell.cd("linux")
+                    if (!shell.which('electron-packager')) {
+                      shell.exec("npm install -g electron-packager")
+                      shell.exec("npm install")
+                      shell.exec("electron-packager . app --platform win32 --arch x64 --out '../dist/windows/'")
+                      shell.exit(1);
+                    } else {
+                      shell.exec("npm install")
+                      shell.exec("electron-packager . app --platform linux --overwrite --out '../dist/'")
                     }
                   })
                 })
