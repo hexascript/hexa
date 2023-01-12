@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import yargs from "yargs/yargs"
 import { hideBin } from "yargs/helpers"
 import server from "./server.js"
@@ -17,7 +16,7 @@ if (argv.create != null) {
 }
 
 if (argv.install != null) {
-  packages.main()
+  packages.main(argv.install)
 }
 
 if (argv.build == "android") {
