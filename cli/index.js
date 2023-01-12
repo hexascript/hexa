@@ -21,9 +21,9 @@ if (argv.install != null) {
 }
 
 if (argv.build == "android") {
-  android.android()
+  build.android()
 }
 
 if (argv.build == "windows") {
-  windows.windows()
+  build.windows()
 }
