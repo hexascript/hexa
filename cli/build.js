@@ -137,8 +137,8 @@ exports.linux = function() {
                 let settings = JSON.parse(data)
                 fs.readFile(`${process.cwd()}/linux/main.js`, (err, buf) => {
                   let data = buf.toString();
-                  data = data.replace('{{width}}', settings.windows.width)
-                    .replace('{{height}}', settings.windows.height)
+                  data = data.replace('{{width}}', settings.linux.width)
+                    .replace('{{height}}', settings.linux.height)
                   fs.writeFile(`${process.cwd()}/linux/main.js`, data, (err) => {
                     if (err) console.log(err)
                     console.log("[+] Create main.js to your project.")
