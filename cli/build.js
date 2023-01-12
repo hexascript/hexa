@@ -2,6 +2,7 @@
 import fs from "fs"
 import paths from "path"
 import { ncp } from "ncp"
+import shell from "shelljs"
 var project_dir = paths.join(paths.dirname(fs.realpathSync(__filename)), '../');
 ncp.limit = 16
 
