@@ -1,12 +1,8 @@
 #!/usr/bin/env node
-
-import yargs from "yargs/yargs"
-import { hideBin } from "yargs/helpers"
 import fs from "fs"
 import paths from "path"
 import { ncp } from "ncp"
 var project_dir = paths.join(paths.dirname(fs.realpathSync(__filename)), '../');
-const argv = yargs(hideBin(process.argv)).argv
 ncp.limit = 16
 
 exports.android = function () {

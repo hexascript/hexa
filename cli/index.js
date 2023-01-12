@@ -13,7 +13,7 @@ if (argv.server != null) {
 }
 
 if (argv.create != null) {
-  create.main()
+  create.main(argv.create)
 }
 
 if (argv.install != null) {
