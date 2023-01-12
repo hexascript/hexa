@@ -15,15 +15,19 @@ exports.main = function (name) {
           console.log(error)
         } else {
           fs.writeFile(`${name}/project.json`, `{
-          "android" : {
-              "applicationId": "com.example.app",
-              "appName": "Example Project",
-			  "versionCode": "1.0",
-			  "versionName": "1.0",
-			  "minSdkVersion": "23.0",
-			  "targetSdkVersion": "33.0"
+        "android" : {
+          "applicationId": "com.example.app",
+          "appName": "Example Project",
+          "versionCode": "1.0",
+          "versionName": "1.0",
+          "minSdkVersion": "23.0",
+          "targetSdkVersion": "33.0"
         },
         "windows": {
+          "width": "600",
+          "height": "600"
+        },
+        "linux": {
           "width": "600",
           "height": "600"
         }
