@@ -16,8 +16,7 @@
 * 📱 **Cross-Platform.** Your apps can run on Android, iOS, Linux, MacOS, Windows, and Web Apps.
 
 ## 🚀 Getting Started ##
-<details> 
- <summary>Installation</summary>
+#### Installation ####
  
  
  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white">
@@ -27,28 +26,22 @@
  $ cd hexa
  $ npm run build
  ```
-</details>
 
-<details> 
- <summary>New Project</summary>
+#### New Project ####
  
  ```bash
  $ hexa --create helloworld
  $ cd helloworld
  $ hexa --server
  ```
-</details>
 
-<details> 
- <summary>Build & Compile</summary>
+#### Build & Compile ####
 
 ```bash
  $ hexa --build [android|windows|web]
  ```
-</details>
 
-<details> 
- <summary>Examples</summary>
+#### Examples ####
  
 #### app.js ####
  ```js
@@ -86,7 +79,6 @@
    HexaDOM.render('#root', Html)
  }
  ```
-</details>
 
 ## 👨‍💻 Build to ##
 
