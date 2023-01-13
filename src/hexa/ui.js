@@ -80,7 +80,7 @@ export function ProgressBar(data) {
   var gradient = (data.gradientFrom == null && data.gradientTo == null) ? { from:'blue-400', to:'indigo-500' } : { from: data.gradientFrom, to: data.gradientTo }
   var textColor = (data.textColor == null) ? 'text-white' : `text-${data.textColor}`
   var value = (data.value == null) ? '0%' : data.value
-  return `<div class="h-4 w-full overflow-hidden rounded-full bg-slate-100 shadow"><div style="width:${value}" class="h-full rounded-full bg-gradient-to-r from-${gradient.from} to-${gradient.to}"></div></div>`
+  return `<div class="h-4 w-full overflow-hidden rounded-full bg-slate-100 shadow"><div id="${data.id}" style="width:${value}" class="h-full rounded-full bg-gradient-to-r from-${gradient.from} to-${gradient.to}"></div></div>`
 }
 
 export function Button(data) {
