@@ -16,7 +16,7 @@
 * 📱 **Cross-Platform.** Your apps can run on Android, iOS, Linux, MacOS, Windows, and Web Apps.
 
 ## 🚀 Getting Started ##
-#### Installation ####
+### Installation ###
  
  
  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white">
@@ -27,7 +27,7 @@
  $ npm run build
  ```
 
-#### New Project ####
+### New Project ###
  
  ```bash
  $ hexa --create helloworld
@@ -35,13 +35,13 @@
  $ hexa --server
  ```
 
-#### Build & Compile ####
+### Build & Compile ###
 
 ```bash
  $ hexa --build [android|windows|web]
  ```
 
-#### Examples ####
+### Examples ###
  
 #### app.js ####
  ```js
@@ -167,6 +167,31 @@ Usage
 ```js
 Button({
   text: 'Button'
+})
+```
+</details>
+
+<details> 
+ <summary>ProgressBar</summary>
+
+<img src="https://i.ibb.co/pr2DL0c/IMG-20230113-203400.jpg">
+
+Attributes
+* id (string)
+* value (number %)
+* gradientFrom (string)
+* gradientTo (string)
+
+Import
+```js
+import { ProgressBar } from '../hexa/ui.js'
+```
+
+Usage
+```js
+ProgressBar({
+  id: 'progressbar',
+  value: '70%'
 })
 ```
 </details>
