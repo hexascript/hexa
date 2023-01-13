@@ -22,33 +22,13 @@ function isWebview() {
 }
 
 export function AppBar(data) {
-  if(isWebview() == true) {
-    var paddingtop = '11'
-  }else{
-    var paddingtop = '4'
-  }
-  if(data.backgroundColor == null) {
-    var backgroundColor = 'bg-slate-50'
-  } else {
-    var backgroundColor = `bg-${data.backgroundColor}`
-  }
-  if(data.textColor == null) {
-    var textColor = 'text-slate-800'
-  } else {
-    var textColor = `text-${data.textColor}`
-  }
-  if (data.text == null) {
-    var text = 'AppBar'
-  } else {
-    var text = data.text
-  }
-  if(data.backButton == true) {
-       var backbutton = `<div onclick="history.back()" class="hover:text-slate-500"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></div>`
-  }else{
-       var backbutton = ''
-  }
+  var paddingtop = (isWebview() == true) ? '11' : '4'
+  var backgroundColor = (data.backgroundColor == null) ? 'bg-slate-50' : `bg-${data.backgroundColor}`
+  var textColor = (data.textColor == null) ? 'text-slate-800' : `bg-${data.textColor}`
+  var text = (data.text == null) ? 'AppBar' : data.text
+  var backButton = (data.backButton == true) ? `<div onclick="history.back()" class="hover:text-slate-500"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></div>` : ''
   return `<div class="relative sticky top-0 rounded-b-1xl h-9 ${backgroundColor} border-b shadow p-3 pt-${paddingtop} pb-10 ${textColor} ${data.class}">
-         <div class="mb-4 flex items-center justify-start">${backbutton}
+         <div class="mb-4 flex items-center justify-start">${backButton}
          <h2 class="font-medium ml-3 text-lg">${text}</h2>
          </div>
          <div class="space-y-2 text-center"></div>
@@ -61,36 +41,12 @@ export function Alerts(data) {
 }
 
 export function TextBox(data) {
-  if(data.backgroundColor == null) {
-    var backgroundColor = 'bg-gray-50'
-  } else {
-    var backgroundColor = `bg-${data.backgroundColor}`
-  }
-  if(data.textColor == null) {
-    var textColor = 'text-gray-900'
-  } else {
-    var textColor = `text-${data.textColor}`
-  }
-  if(data.borderColor == null) {
-    var borderColor = 'border border-gray-300'
-  } else {
-    var borderColor = `border border-${data.borderColor}`
-  }
-  if(data.placeHolder == null) {
-    var placeHolder = ''
-  } else {
-    var placeHolder = data.placeHolder
-  }
-  if(data.readOnly == true) {
-       var readonly = 'readonly'
-  }else{
-       var readonly = ''
-  }
-  if(data.labelText == null) {
-    var labelText = ''
-  }else{
-    var labelText = `<label class="block mb-2 text-sm font-medium ${textColor} dark:text-gray-300">${data.labelText}</label>`
-  }
+  var backgroundColor = (data.backgroundColor == null) ? 'bg-gray-50' : `bg-${data.backgroundColor}`
+  var textColor = (data.textColor == null) ? 'text-gray-900' : `text-${data.textColor}`
+  var borderColor = (data.borderColor == null) ? 'border border-gray-300' : `border border-${data.borderColor}`
+  var placeHolder = (data.placeHolder == null) ? '' : data.placeHolder
+  var readonly = (data.readOnly == true) ? 'readonly' : ''
+  var labelText = (data.labelText == null) ? '' : `<label class="block mb-2 text-sm font-medium ${textColor} dark:text-gray-300">${data.labelText}</label>`
   if(data.type == 'textarea') {
     return `${labelText}
     <textarea name="${data.name}" id="${data.id}" rows="4" class="block p-2.5 w-full text-sm ${backgroundColor} ${textColor} rounded-lg ${borderColor}" placeholder="${placeHolder}"></textarea>`
@@ -101,11 +57,7 @@ export function TextBox(data) {
 }
 
 export function Switch(data) {
-  if (data.checked == true) {
-    var checked = 'checked'
-  } else {
-    var checked = ''
-  }
+  var checked = (data.checked == true) ? 'checked' : ''
   return ` <dh-component>
                       <div class="w-16 h-8 cursor-pointer rounded-full relative shadow-sm">
                               <input aria-label="switchbox" type="checkbox" name="${data.name}" id="${data.id}" class="mt-2 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:bg-blue-600 focus:outline-none checkbox w-4 h-4 rounded-full bg-white absolute m-1 shadow-sm appearance-none cursor-pointer" ${checked}/>
@@ -124,48 +76,27 @@ export function Switch(data) {
                   </dh-component>`
 }
 
+export function ProgressBar(data) {
+  var gradient = (data.gradientFrom == null && data.gradientTo == null) ? { from:'blue-400', to:'indigo-500' } : { from: data.gradientFrom, to: data.gradientTo }
+  var textColor = (data.textColor == null) ? 'text-white' : `text-${data.textColor}`
+  var value = (data.value == null) ? '0%' : data.value
+  return `<div class="h-4 w-full overflow-hidden rounded-full bg-slate-100 shadow"><div style="width:${value}" class="h-full rounded-full bg-gradient-to-r from-${gradient.from} to-${gradient.to}"></div></div>`
+}
+
 export function Button(data) {
-  if(data.backgroundColor == null) {
-    var backgroundColor = 'bg-blue-500'
-  }else{
-    var backgroundColor = `bg-${data.backgroundColor}`
-  }
-  if(data.textColor == null) {
-    var textColor = 'text-white'
-  }else{
-    var textColor = `text-${data.textColor}`
-  }
-  if (data.disabled == true) {
-    var disabled = 'disabled'
-  } else {
-    var disabled = ''
-  }
+  var backgroundColor = (data.backgroundColor == null) ? 'bg-blue-500' : `bg-${data.backgroundColor}`
+  var textColor = (data.textColor == null) ? 'text-white' : `text-${data.textColor}`
+  var disabled = (data.disabled == true) ? 'disabled' : ''
   return `<button id="${data.id}" class="w-full ${backgroundColor} ${textColor} font-bold py-2 px-4 rounded-2xl" ${disabled}>
     ${data.text}
   </button>`
 }
 
 export function MenuList(data) {
-  if (data.text == null) {
-    var text = 'Menu List'
-  } else {
-    var text = data.text
-  }
-  if (data.description == null) {
-    var description = 'Menu List Description'
-  } else {
-    var description = data.description
-  }
-  if (data.backgroundColor == null) {
-    var backgroundColor = 'bg-white'
-  } else {
-    var backgroundColor = `bg-${data.backgroundColor}`
-  }
-  if (data.textColor == null) {
-    var textColor = 'text-white'
-  } else {
-    var textColor = `text-${data.textColor}`
-  }
+  var text = (data.text == null) ? 'Menu List' : data.text
+  var description = (data.description == null) ? 'Menu List Description' : data.description
+  var backgroundColor = (data.backgroundColor == null) ? 'bg-white' : `bg-${data.backgroundColor}`
+  var textColor = (data.textColor == null) ? 'text-white' : `text-${data.textColor}`
   return `<div class="${backgroundColor} p-3 rounded-xl shadow-xl flex items-center justify-between mt-4">
                  <div class="flex space-x-6 items-center">
                    <img src="${data.image}" class="w-auto w-16 h-16 rounded-lg">
@@ -180,21 +111,9 @@ export function MenuList(data) {
 }
 
 export function SplashScreen(data) {
-  if(isWebview() == true) {
-    var paddingtop = '11'
-  } else {
-    var paddingtop = '4'
-  }
-  if(data.backgroundColor == null) {
-    var backgroundColor = 'bg-gray-50'
-  } else {
-    var backgroundColor = `bg-${data.backgroundColor}`
-  }
-  if(data.textColor == null) {
-    var textColor = 'text-gray-900'
-  }else{
-    var textColor = `text-${data.textColor}`
-  }
+  var paddingtop = (isWebview() == true) ? '11' : '4'
+  var backgroundColor = (data.backgroundColor == null) ? 'bg-gray-50' : `bg-${data.backgroundColor}`
+  var textColor = (data.textColor == null) ? 'text-gray-900' : `text-${data.textColor}`
   window.setTimeout(() => {
     location.href = `#${data.redirect}`
   }, 3000)
