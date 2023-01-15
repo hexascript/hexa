@@ -118,6 +118,31 @@ AppBar({
 </details>
 
 <details> 
+ <summary>Accordion</summary>
+
+<img src="https://i.ibb.co/8BVhvc5/Screenshot-2023-01-15-13-02-27-74.jpg">
+
+<img src="https://i.ibb.co/5RhvWc0/Screenshot-2023-01-15-13-03-42-21.jpg">
+
+Attributes
+* title (string)
+* content (string)
+
+Import
+```js
+import { Accordion } from '../hexa/ui.js'
+```
+
+Usage
+```js
+Accordion({
+  title: 'Accordion',
+  content: 'This is accordion'
+})
+```
+</details>
+
+<details> 
  <summary>Alerts</summary>
 
 <img src="https://i.ibb.co/3vNbWwQ/Screenshot-2023-01-10-18-38-25-80.jpg">
