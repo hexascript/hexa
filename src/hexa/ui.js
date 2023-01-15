@@ -92,6 +92,23 @@ export function Button(data) {
   </button>`
 }
 
+export function Accordion(data) {
+  var title = (data.title == null) ? 'Accordion' : data.title
+  var content = (data.content == null) ? '' : data.content
+  return `<details class="group">
+  				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+  					<span>${title}</span>
+  					<span class="transition group-open:rotate-180">
+                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+  </svg>
+                </span>
+  				</summary>
+  			<p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+  					 ${content}
+  				</p>
+  			</details>`
+}
+
 export function MenuList(data) {
   var text = (data.text == null) ? 'Menu List' : data.text
   var description = (data.description == null) ? 'Menu List Description' : data.description
