@@ -147,7 +147,7 @@ exports.linux = function() {
                     if (!shell.which('electron-packager')) {
                       shell.exec("npm install -g electron-packager")
                       shell.exec("npm install")
-                      shell.exec("electron-packager . app --platform win32 --arch x64 --out '../dist/windows/'")
+                      shell.exec("electron-packager . app --platform linux --overwrite --out '../dist/windows/'")
                       shell.exit(1);
                     } else {
                       shell.exec("npm install")
