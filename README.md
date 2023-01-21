@@ -56,7 +56,7 @@
  
  ```
  
- #### pages/home.js ####
+ #### pages/index.js ####
  ```js
  import HexaDOM from '../hexa/dom.js'
  import { AppBar } from '../hexa/ui.js'
@@ -69,14 +69,12 @@
    })
  
    const Html = `
-     <View>
-        ${Header}
-        <Content>
-           <h1>Hello World</h1>
-        </Content>
-     </View>`
+     ${Header}
+     <Content>
+        <h1>Hello World</h1>
+     </Content>`
    
-   HexaDOM.render('#root', Html)
+   HexaDOM.render('#root', `<View>${Html}</View>`)
  }
  ```
 
