@@ -46,10 +46,10 @@
 #### app.js ####
  ```js
  import Hexa from './hexa/core.js'
- import Home from './pages/home.js'
+ import Index from './pages/index.js'
  
  const Main = () => {
-     Hexa.route('/', Home)
+     Hexa.route('/', Index)
  }
  
  Hexa.ready(Main)
