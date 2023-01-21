@@ -36,8 +36,12 @@ export function AppBar(data) {
 }
 
 export function Alerts(data) {
-  return `<div id="${data.id}" style="display:${data.display};" class="bg-${data.backgroundColor} border border-${data.borderColor} text-${data.textColor} px-4 py-3 rounded relative ${data.class}" role="alert">
-       <span class="block sm:inline">${data.text}</span></div>`
+  var backgroundColor = (data.backgroundColor == null) ? 'bg-gray-50' : `bg-${data.backgroundColor}`
+  var textColor = (data.textColor == null) ? 'text-gray-900' : `text-${data.textColor}`
+  var borderColor = (data.borderColor == null) ? 'border border-gray-300' : `border border-${data.borderColor}`
+  var text = (data.text == null) ? 'Alerts' : data.text
+  return `<div id="${data.id}" style="display:${data.display};" class="${backgroundColor} ${borderColor} ${textColor} px-4 py-3 rounded relative" role="alert">
+       <span class="block sm:inline">${text}</span></div>`
 }
 
 export function TextBox(data) {
