@@ -70,11 +70,11 @@
  
    const Html = `
      ${Header}
-     <Content>
+     <View>
         <h1>Hello World</h1>
-     </Content>`
+     </View>`
    
-   HexaDOM.render('#root', `<View>${Html}</View>`)
+   HexaDOM.render('#root', Html)
  }
  ```
 

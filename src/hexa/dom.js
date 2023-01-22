@@ -12,8 +12,7 @@ const HexaDOM = {
   },
   render(id, data) {
     const template = this.element(id)
-    const result = data.replace(/<view>(.*?)<\/view>/gis, '<div class="mx-auto"><div class="h-full bg-gray-50">$1</div></div>')
-      .replace(/<content>(.*?)<\/content>/gis, '<div class="p-6">$1</div>')
+    const result = data.replace(/<view>(.*?)<\/view>/gis, '<div class="p-6">$1</div>')
 
     template.innerHTML = result
   }
